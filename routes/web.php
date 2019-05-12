@@ -17,6 +17,7 @@
 */
 Route::get('/inicio', 'pedibeerController@index');
 Route::get('/pedir', 'pedibeerController@index');
+Route::get('/contacto', 'miController@create');
 
 
 
