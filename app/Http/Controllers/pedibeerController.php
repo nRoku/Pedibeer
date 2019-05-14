@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Pedido;
+
 class pedibeerController extends Controller
 {
     /**
@@ -23,7 +25,7 @@ class pedibeerController extends Controller
      */
     public function create()
     {
-        //
+        return view('inicio');
     }
 
     /**
@@ -34,7 +36,12 @@ class pedibeerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $pedido = new Pedido;
+        $pedido->estilo = $request->estilo;
+        $pedido->litros = $request->litros;
+        $pedido->precio = $request->precio;
+
+        $pedido->save();
     }
 
     /**

@@ -6,12 +6,14 @@
 
 @section("stockDisponible")
 
- <form class="form-inline" method="post" action="" style="margin-top: 15px; margin-left: 650px; margin-bottom: 15px;">
-    $<input class="form-control mr-sm-2" type="number" id="id_contador" value=0 style="width: 150px;">
-    <input class="form-control mr-sm-2" type="number" id="id_contador_litros" value=0 style="width: 150px; margin-left: 1px; float: left;">Lts.
-    <input class="form-control mr-sm-2" type="text" id="id_estilos" hidden style="width: 150px; margin-left: 1px; float: left;">
+ <form class="form-inline" method="post" action="/pedidos" style="margin-top: 15px; margin-left: 650px; margin-bottom: 15px;">
 
-    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit" onclick="mostrarEstilos()" style="margin-left: 25px;">Enviar</button>
+	@csrf
+    $<input class="form-control mr-sm-2" name="precio" type="number" id="id_contador" value=0 style="width: 150px;">
+    <input class="form-control mr-sm-2" name="litros" type="number" id="id_contador_litros" value=0 style="width: 150px; margin-left: 1px; float: left;">Lts.
+    <input class="form-control mr-sm-2" name="estilo" type="text" id="id_estilos" hidden style="width: 150px; margin-left: 1px; float: left;">
+
+    <input class="btn btn-outline-primary my-2 my-sm-0" type="submit" onclick="mostrarEstilos()" value="Enviar" style="margin-left: 25px;">
     <button class="btn btn-info my-2 my-sm-0" type="submit" style="margin-left: 5px;">Imprimir</button>
 </form>
 

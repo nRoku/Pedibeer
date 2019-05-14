@@ -104,42 +104,42 @@ function disminuirContador(estilo,litros,precio){
 }
 
 
-function mostrarEstilos(estilo,litros,precio){
+function mostrarEstilos(){
 
-	switch(estilo){
-			case 'IPA':
-				$('#id_contador1').val();
-				for (var i = 0; i < $('#id_contador1').val(); i++) {
-					$('#id_estilos').val() + ", " + estilo;
-				}
-			break;
-			case 'Belgian Dubbel':
-				var suma_id_individual = parseInt($('#id_contador2').val()) - 1;
-				$('#id_contador2').val(suma_id_individual);
-			break;
-			case 'Irish Red Ale':
-				var suma_id_individual = parseInt($('#id_contador3').val()) - 1;
-				$('#id_contador3').val(suma_id_individual);
-			break;
-			case 'Cream Stout':
-				var suma_id_individual = parseInt($('#id_contador4').val()) - 1;
-				$('#id_contador4').val(suma_id_individual);
-			break;
-			case 'IPA Cuyana':
-				var suma_id_individual = parseInt($('#id_contador5').val()) - 1;
-				$('#id_contador5').val(suma_id_individual);
-			break;
-			case 'IPA Diablo':
-				var suma_id_individual = parseInt($('#id_contador6').val()) - 1;
-				$('#id_contador6').val(suma_id_individual);
-			break;
-			case 'Porter':
-				var suma_id_individual = parseInt($('#id_contador7').val()) - 1;
-				$('#id_contador7').val(suma_id_individual);
-			break;
-			case 'Wee Heavy':
-				var suma_id_individual = parseInt($('#id_contador8').val()) - 1;
-				$('#id_contador8').val(suma_id_individual);
-			break;
-		}
+	var arrayEstilos = []; //estilos enviados a bbdd
+	
+	$('#id_contador1').val();
+	for (var i = 0; i < parseInt($('#id_contador1').val()); i++) {
+		arrayEstilos.push('IPA');
+	}
+	$('#id_contador2').val();
+	for (var i = 0; i < parseInt($('#id_contador2').val()); i++) {
+		arrayEstilos.push('Belgian Dubbel');
+	}
+	$('#id_contador3').val();
+	for (var i = 0; i < parseInt($('#id_contador3').val()); i++) {
+		arrayEstilos.push('Irish Red Ale');
+	}
+	$('#id_contador4').val();
+	for (var i = 0; i < parseInt($('#id_contador4').val()); i++) {
+		arrayEstilos.push('Cream Stout');
+	}
+	$('#id_contador5').val();
+	for (var i = 0; i < parseInt($('#id_contador5').val()); i++) {
+		arrayEstilos.push('IPA Cuyana');
+	}
+	$('#id_contador6').val();
+	for (var i = 0; i < parseInt($('#id_contador6').val()); i++) {
+		arrayEstilos.push('IPA Diablo');
+	}
+	$('#id_contador7').val();
+	for (var i = 0; i < parseInt($('#id_contador7').val()); i++) {
+		arrayEstilos.push('Porter');
+	}
+	$('#id_contador8').val();
+	for (var i = 0; i < parseInt($('#id_contador8').val()); i++) {
+		arrayEstilos.push('Wee Heavy');
+	}
+
+	$('#id_estilos').val(arrayEstilos);
 }
