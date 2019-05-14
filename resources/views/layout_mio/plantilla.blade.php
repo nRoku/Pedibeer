@@ -33,7 +33,7 @@
 		    <a class="nav-link" href="/pedir">Pedir</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link" href="#">Historial</a>
+		    <a class="nav-link" href="/historial">Historial</a>
 		  </li>
 		  <li class="nav-item">
 		    <a class="nav-link" href="/contacto">Contacto</a>
@@ -44,6 +44,10 @@
 		</ul>
 
 	</div>
+
+<!-----------------------------------------CUERPO PAGINA---------------------------------->
+
+	@yield("cuerpo")
 
 <!-----------------------------------------CARDS CON BOOTSTRAP---------------------------------->
 

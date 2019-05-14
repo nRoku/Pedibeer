@@ -6,7 +6,7 @@
 
 @section("stockDisponible")
 
- <form class="form-inline" method="post" action="/pedidos" style="margin-top: 15px; margin-left: 650px; margin-bottom: 15px;">
+ <form class="form-inline" method="post" action="/pedidos" style="margin-top: 15px; margin-left: 570px; margin-bottom: 15px;">
 
 	@csrf
     $<input class="form-control mr-sm-2" name="precio" type="number" id="id_contador" value=0 style="width: 150px;">
@@ -14,7 +14,7 @@
     <input class="form-control mr-sm-2" name="estilo" type="text" id="id_estilos" hidden style="width: 150px; margin-left: 1px; float: left;">
 
     <input class="btn btn-outline-primary my-2 my-sm-0" type="submit" onclick="mostrarEstilos()" value="Enviar" style="margin-left: 25px;">
-    <button class="btn btn-info my-2 my-sm-0" type="submit" style="margin-left: 5px;">Imprimir</button>
+    <input class="btn btn-info my-2 my-sm-0" type="button" onclick="imprimirUltimoPedido('areaImprimir')" value="Imprimir último pedido" style="margin-left: 5px;">
 </form>
 
 <div style="margin-left: 190px;">
@@ -122,6 +122,35 @@
 			<input class="form-control mr-sm-2" type="number" id="id_contador8" value=0 style="width: 70px; float: right;">
 		  </div>
 		</div>
+</div>
+
+<!-------------------------ultimo pedido a imprimir------------------------------------------->
+<div id="areaImprimir" align="center" hidden>
+	<table class="table table-responsive table-striped">
+	    <thead>
+	        <tr>
+	            <th>Estilo</th>
+	            <th>Litros</th>
+	            <th>Precio</th>
+	            <th>Fecha y hora</th>
+	        </tr>
+	    </thead>
+	    <?php
+	
+	    $pedidos=DB::select('SELECT * FROM pedidos ORDER BY id DESC limit 1');
+	
+	  	foreach ($pedidos as $pedido) {
+	?>
+	    <tbody>
+	        <tr>
+	            <td><?php echo $pedido->estilo . "<br>"; ?></td>
+	            <td><?php echo $pedido->litros . "<br>"; ?></td>
+	            <td><?php echo $pedido->precio . "<br>"; ?></td>
+	            <td><?php echo $pedido->created_at . "<br>"; ?></td>
+	        </tr>
+	    </tbody>
+	<?php } ?>
+	</table>
 </div>
 
 @endsection

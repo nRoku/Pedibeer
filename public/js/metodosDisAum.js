@@ -143,3 +143,16 @@ function mostrarEstilos(){
 
 	$('#id_estilos').val(arrayEstilos);
 }
+
+function imprimirUltimoPedido(nombreTag){
+
+	var contenido= document.getElementById(nombreTag).innerHTML;
+
+	var contenidoOriginal= document.body.innerHTML;
+
+	document.body.innerHTML = contenido;
+
+	window.print();
+
+	document.body.innerHTML = contenidoOriginal;
+}
