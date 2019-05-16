@@ -6,7 +6,7 @@
 
 @section("stockDisponible")
 
- <form class="form-inline" method="post" action="/pedidos" style="margin-top: 15px; margin-left: 570px; margin-bottom: 15px;">
+ <form class="form-inline" method="post" action="/pedidos" style="margin-top: 15px; margin-left: 650px; margin-bottom: 15px;">
 
 	@csrf
     $<input class="form-control mr-sm-2" name="precio" type="number" id="id_contador" value=0 style="width: 150px;">
@@ -14,7 +14,7 @@
     <input class="form-control mr-sm-2" name="estilo" type="text" id="id_estilos" hidden style="width: 150px; margin-left: 1px; float: left;">
 
     <input class="btn btn-outline-primary my-2 my-sm-0" type="submit" onclick="mostrarEstilos()" value="Enviar" style="margin-left: 25px;">
-    <input class="btn btn-info my-2 my-sm-0" type="button" onclick="imprimirUltimoPedido('areaImprimir')" value="Imprimir último pedido" style="margin-left: 5px;">
+    <input class="btn btn-info my-2 my-sm-0" type="button" onclick="imprimirUltimoPedido('areaImprimir')" value="Imprimir" style="margin-left: 5px;">
 </form>
 
 <div style="margin-left: 190px;">
@@ -27,7 +27,7 @@
 		    <p style="">Precio: $5200</p>
 		    <button type="button" class="btn btn-outline-success" onclick="aumentarContador('IPA',50,5200.00)">+</button>
 			<button type="button" class="btn btn-outline-danger" onclick="disminuirContador('IPA',50,5200.00)">-</button>
-			<input class="form-control mr-sm-2" type="number" id="id_contador1" value=0 style="width: 70px; float: right;">
+			<input class="form-control mr-sm-2" type="number" id="id_contador1" value=0 style="width: 50px; float: right;">
 		  </div>
 		</div>
 		
@@ -40,7 +40,7 @@
 		    <p style="">Precio: $4700</p>
 		    <button type="button" class="btn btn-outline-success" onclick="aumentarContador('Belgian Dubbel',50,4700.00)">+</button>
 			<button type="button" class="btn btn-outline-danger" onclick="disminuirContador('Belgian Dubbel',50,4700.00)">-</button>
-			<input class="form-control mr-sm-2" type="number" id="id_contador2" value=0 style="width: 70px; float: right;">
+			<input class="form-control mr-sm-2" type="number" id="id_contador2" value=0 style="width: 50px; float: right;">
 		  </div>
 		</div>
 
@@ -54,7 +54,7 @@
 		    <p style="">Precio: $4500</p>
 		    <button type="button" class="btn btn-outline-success" onclick="aumentarContador('Irish Red Ale',50,4500.00)">+</button>
 			<button type="button" class="btn btn-outline-danger" onclick="disminuirContador('Irish Red Ale',50,4500.00)">-</button>
-			<input class="form-control mr-sm-2" type="number" id="id_contador3" value=0 style="width: 70px; float: right;">
+			<input class="form-control mr-sm-2" type="number" id="id_contador3" value=0 style="width: 50px; float: right;">
 		  </div>
 		</div>
 		
@@ -67,7 +67,7 @@
 		    <p style="">Precio: $4800</p>
 		    <button type="button" class="btn btn-outline-success" onclick="aumentarContador('Cream Stout',50,4800.00)">+</button>
 			<button type="button" class="btn btn-outline-danger" onclick="disminuirContador('Cream Stout',50,4800.00)">-</button>
-			<input class="form-control mr-sm-2" type="number" id="id_contador4" value=0 style="width: 70px; float: right;">
+			<input class="form-control mr-sm-2" type="number" id="id_contador4" value=0 style="width: 50px; float: right;">
 		  </div>
 		</div>
 
@@ -80,7 +80,7 @@
 		    <p style="">Precio: $5100</p>
 		    <button type="button" class="btn btn-outline-success" onclick="aumentarContador('IPA Cuyana',50,5100.00)">+</button>
 			<button type="button" class="btn btn-outline-danger" onclick="disminuirContador('IPA Cuyana',50,5100.00)">-</button>
-			<input class="form-control mr-sm-2" type="number" id="id_contador5" value=0 style="width: 70px; float: right;">
+			<input class="form-control mr-sm-2" type="number" id="id_contador5" value=0 style="width: 50px; float: right;">
 		  </div>
 		</div>
 		
@@ -93,7 +93,7 @@
 		    <p style="">Precio: $5500</p>
 		    <button type="button" class="btn btn-outline-success" onclick="aumentarContador('IPA Diablo',50,5500.00)">+</button>
 			<button type="button" class="btn btn-outline-danger" onclick="disminuirContador('IPA Diablo',50,5500.00)">-</button>
-			<input class="form-control mr-sm-2" type="number" id="id_contador6" value=0 style="width: 70px; float: right;">
+			<input class="form-control mr-sm-2" type="number" id="id_contador6" value=0 style="width: 50px; float: right;">
 		  </div>
 		</div>
 		
@@ -106,7 +106,7 @@
 		    <p style="">Precio: $4200</p>
 		    <button type="button" class="btn btn-outline-success" onclick="aumentarContador('Porter',50,4200.00)">+</button>
 			<button type="button" class="btn btn-outline-danger" onclick="disminuirContador('Porter',50,4200.00)">-</button>
-			<input class="form-control mr-sm-2" type="number" id="id_contador7" value=0 style="width: 70px; float: right;">
+			<input class="form-control mr-sm-2" type="number" id="id_contador7" value=0 style="width: 50px; float: right;">
 		  </div>
 		</div>
 		
@@ -119,7 +119,7 @@
 		    <p style="">Precio: $4500</p>
 		    <button type="button" class="btn btn-outline-success" onclick="aumentarContador('Wee Heavy',50,4500.00)">+</button>
 			<button type="button" class="btn btn-outline-danger" onclick="disminuirContador('Wee Heavy',50,4500.00)">-</button>
-			<input class="form-control mr-sm-2" type="number" id="id_contador8" value=0 style="width: 70px; float: right;">
+			<input class="form-control mr-sm-2" type="number" id="id_contador8" value=0 style="width: 50px; float: right;">
 		  </div>
 		</div>
 </div>

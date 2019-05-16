@@ -8,6 +8,28 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
+	<style>
+
+	input[type=number]::-webkit-outer-spin-button,
+	
+	input[type=number]::-webkit-inner-spin-button {
+	
+	    -webkit-appearance: none;
+	
+	    margin: 0;
+	
+	}
+	
+	 
+	
+	input[type=number] {
+	
+	    -moz-appearance:textfield;
+	
+	}
+	
+	</style>
+
 </head>
 <body>
 
@@ -39,7 +61,7 @@
 		    <a class="nav-link" href="/contacto">Contacto</a>
 		  </li>
 		  <li class="nav-item">
-		    <a class="nav-link disabled" href="#">Salir</a>
+		    <a class="nav-link disabled" href="{{ url('/logout') }}">Salir</a>
 		  </li>
 		</ul>
 

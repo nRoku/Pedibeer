@@ -14,9 +14,9 @@
 /*Route::get('/', function () {
     return view('welcome');
 });
-*/
+*//*
 Route::get('/inicio', 'pedibeerController@index');
-Route::get('/', 'pedibeerController@index');
+Route::get('/', 'pedibeerController@index');*/
 Route::get('/pedir', 'pedibeerController@index');
 Route::get('/contacto', 'miController@create');
 Route::get('/historial', 'pedibeerController@show');
@@ -26,3 +26,9 @@ Route::resource('/pedidos', 'pedibeerController');
 
 
 
+
+Auth::routes();
+
+Route::get('/', 'HomeController@index')->name('inicio');
+
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
