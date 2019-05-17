@@ -125,7 +125,7 @@
 </div>
 
 <!-------------------------ultimo pedido a imprimir------------------------------------------->
-<div id="areaImprimir" align="center" hidden>
+<div id="areaImprimir" align="center">
 	<table class="table table-responsive table-striped">
 	    <thead>
 	        <tr>
@@ -133,13 +133,22 @@
 	            <th>Litros</th>
 	            <th>Precio</th>
 	            <th>Fecha y hora</th>
+	            <!--th>Marca</th-->
 	        </tr>
 	    </thead>
 	    <?php
-	
-	    $pedidos=DB::select('SELECT * FROM pedidos ORDER BY id DESC limit 1');
+
+	    use App\Pedido;
+		
+	    $pedidos=Pedido::where('cerveceria', 'ogham')
+	    ->orderBy('id','desc')
+	    ->take(1)
+	    ->get();
+
+	    //$cervecerias=DB::select('');
 	
 	  	foreach ($pedidos as $pedido) {
+
 	?>
 	    <tbody>
 	        <tr>

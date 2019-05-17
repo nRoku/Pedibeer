@@ -54,9 +54,9 @@
 		  <li class="nav-item">
 		    <a class="nav-link" href="/pedir">Pedir</a>
 		  </li>
-		  <li class="nav-item">
+		  <!--li class="nav-item">
 		    <a class="nav-link" href="/historial">Historial</a>
-		  </li>
+		  </li-->
 		  <li class="nav-item">
 		    <a class="nav-link" href="/contacto">Contacto</a>
 		  </li>

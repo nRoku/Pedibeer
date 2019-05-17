@@ -1,7 +1,6 @@
 @extends('layout_mio.plantilla')
 
-@section('cuerpo')
-
+@section("cuerpo")
 <center>
 	<table class="table table-responsive table-striped" style="width: 1070px;">
 	    <thead>
@@ -16,8 +15,7 @@
 		
 		use App\Pedido;
 
-	    $pedidos=Pedido::where('cerveceria', 'ogham')
-	    ->get();
+	    $pedidos=Pedido::all();
 	
 	  	foreach ($pedidos as $pedido) {
 	?>

@@ -40,6 +40,7 @@ class pedibeerController extends Controller
         $pedido->estilo = $request->estilo;
         $pedido->litros = $request->litros;
         $pedido->precio = $request->precio;
+        $pedido->cerveceria = 'Ogham';
 
         $pedido->save();
 
