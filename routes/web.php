@@ -17,11 +17,10 @@
 *//*
 Route::get('/inicio', 'pedibeerController@index');
 Route::get('/', 'pedibeerController@index');*/
-Route::get('/pedir', 'pedibeerController@index');
-Route::get('/administrar', 'miController@create')->middleware('auth', 'role:admin');
-//Route::get('/historial', 'pedibeerController@show');
-
-Route::resource('/pedidos', 'pedibeerController');
+Route::get('/pedir', 'pedibeerController@index')->middleware('auth', 'role:user');
+Route::get('/contacto', 'miController@create')->middleware('auth', 'role:user');
+Route::get('/historial', 'pedibeerController@show')->middleware('auth', 'role:admin');//para usuario administrador
+Route::resource('/pedidos', 'pedibeerController')->middleware('auth', 'role:user');
 
 
 

@@ -51,15 +51,21 @@
 		  <li class="nav-item">
 		    <a class="nav-link active" href="/inicio">Inicio</a>
 		  </li>
+		  @if(Auth::user()->hasRole('user'))
 		  <li class="nav-item">
 		    <a class="nav-link" href="/pedir">Pedir</a>
 		  </li>
-		  <!--li class="nav-item">
+		  @endif
+		  @if(Auth::user()->hasRole('admin'))
+		  <li class="nav-item">
 		    <a class="nav-link" href="/historial">Historial</a>
-		  </li-->
+		  </li>
+		  @endif
+		  @if(Auth::user()->hasRole('user'))
 		  <li class="nav-item">
 		    <a class="nav-link" href="/contacto">Contacto</a>
 		  </li>
+		  @endif
 		  <li class="nav-item">
 		    <a class="nav-link disabled" href="{{ url('/logout') }}">Salir</a>
 		  </li>

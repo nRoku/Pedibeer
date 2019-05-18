@@ -23,7 +23,7 @@ class miController extends Controller
      */
     public function create()
     {
-        return view('administrar');
+        return view('contacto');
     }
 
     /**

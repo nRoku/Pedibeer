@@ -17,7 +17,7 @@ class CheckRole
     {
         if (!$request->user()->hasRole($role)) {
             
-            return redirect('administrar');
+            return redirect('historial');
         }
 
         return $next($request);
