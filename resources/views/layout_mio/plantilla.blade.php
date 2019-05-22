@@ -34,12 +34,14 @@
 <body>
 
 	<div>
-		@yield("cabecera")
 
-		<nav class="navbar navbar-light bg-light">
-		  <a class="navbar-brand">Pedibeer</a>
-		</nav>
-
+		@if(Auth::user()->hasRole('user'))
+			@yield("cabecera")
+	
+				<nav class="navbar navbar-light bg-light">
+				  <a class="navbar-brand">Pedibeer</a>
+			</nav>
+		@endif
 	</div>
 
 
@@ -56,9 +58,14 @@
 		    <a class="nav-link" href="/pedir">Pedir</a>
 		  </li>
 		  @endif
+		  @if(Auth::user()->hasRole('user'))
+		  <li class="nav-item">
+		    <a class="nav-link" href="/misPedidos">Pedidos</a>
+		  </li>
+		  @endif
 		  @if(Auth::user()->hasRole('admin'))
 		  <li class="nav-item">
-		    <a class="nav-link" href="/historial">Historial</a>
+		    <a class="nav-link" href="/historial">Pedidos</a>
 		  </li>
 		  @endif
 		  @if(Auth::user()->hasRole('user'))

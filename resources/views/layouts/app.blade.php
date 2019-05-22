@@ -19,12 +19,12 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body  style="background-image: url('fondo_login.jpg');">
+<body  style="background-image: url('fondo_beer.jpg');">
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-yellow shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Pedibeer
+                   <p style="color: white;"> Pedibeer</p>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -41,11 +41,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">Iniciar</a>
+                                <a class="nav-link" href="{{ route('login') }}"><p style="color: white;">Iniciar</p></a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">Registrarme</a>
+                                    <a class="nav-link" href="{{ route('register') }}"><p style="color: white;">Registrarme</p></a>
                                 </li>
                             @endif
                         @else

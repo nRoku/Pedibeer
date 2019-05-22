@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Pedido;
 
+include 'Auth/LoginController.php';
+
 class pedibeerController extends Controller
 {
     /**
@@ -40,7 +42,7 @@ class pedibeerController extends Controller
         $pedido->estilo = $request->estilo;
         $pedido->litros = $request->litros;
         $pedido->precio = $request->precio;
-        $pedido->cerveceria = 'Ogham';
+        $pedido->cerveceria = $request->usuarioMarca;
 
         $pedido->save();
 
@@ -56,6 +58,15 @@ class pedibeerController extends Controller
     public function show()
     {
         return view('historial');
+    }
+
+    public function mostrarStock()
+    {
+        return view('stock');
+    }
+    public function pedidosUsuario()
+    {
+        return view('pedidos');
     }
 
     /**
